@@ -1,7 +1,7 @@
 {
-  "name": "atom-material-revived",
-  "displayName": "Atom Material Theme",
-  "description": "Atom Material Theme - based on Atom-Material-Ui and Atom-Material-Syntax",
+  "name": "atom-material-theme-revived",
+  "displayName": "Atom Material Theme Revived",
+  "description": "Atom Material Theme Revived - based on Atom-Material-Ui and Atom-Material-Syntax",
   "version": "1.11.0",
   "publisher": "hex-ci",
   "author": {
@@ -30,7 +30,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Atom Material Theme",
+        "label": "Atom Material Theme Revived",
         "uiTheme": "vs-dark",
         "path": "./themes/atom-material-theme.json"
       }
