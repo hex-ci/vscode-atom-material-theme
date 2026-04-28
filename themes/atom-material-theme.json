@@ -22,7 +22,7 @@
     "editorGroup.dropBackground": "#00968828",
     "editorGroupHeader.tabsBackground": "#232e33",
     "editorLineNumber.foreground": "#3e4b50",
-    "editorOverviewRuler.findMatchForeground": "#0000ff",
+    "editorOverviewRuler.findMatchForeground": "#0000ff80",
     "editorWidget.background": "#232e33",
     "editorWidget.border": "#29363d",
     "editorSuggestWidget.background": "#29363d",
@@ -300,7 +300,6 @@
       "scope": [
         "support.class",
         "entity.name.type.class",
-        // "variable.other.object",
         "constant.numeric.css",
         "entity.other.attribute-name",
         "support.variable.object.node.js",

@@ -3,9 +3,9 @@
   "displayName": "Atom Material Theme",
   "description": "Atom Material Theme - based on Atom-Material-Ui and Atom-Material-Syntax",
   "version": "1.10.9",
-  "publisher": "tobiasalthoff",
+  "publisher": "hex-ci",
   "author": {
-    "name": "tobiasalthoff"
+    "name": "Hex"
   },
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -13,13 +13,13 @@
     "theme": "dark"
   },
   "license": "SEE LICENSE IN LICENSE.md",
-  "homepage": "https://github.com/tobiasalthoff/vscode-atom-material-theme/blob/master/README.md",
+  "homepage": "https://github.com/hex-ci/vscode-atom-material-theme/blob/master/README.md",
   "bugs": {
-    "url": "https://github.com/tobiasalthoff/vscode-atom-material-theme/issues"
+    "url": "https://github.com/hex-ci/vscode-atom-material-theme/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tobiasalthoff/vscode-atom-material-theme"
+    "url": "https://github.com/hex-ci/vscode-atom-material-theme"
   },
   "engines": {
     "vscode": "^1.16.0"
@@ -32,7 +32,7 @@
       {
         "label": "Atom Material Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/Atom Material Theme-color-theme.json"
+        "path": "./themes/atom-material-theme.json"
       }
     ]
   }
