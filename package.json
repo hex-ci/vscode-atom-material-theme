@@ -2,7 +2,7 @@
   "name": "atom-material-theme-revived",
   "displayName": "Material Theme Revived (Atom Fork)",
   "description": "Material Design dark theme for VS Code — a community-maintained fork of the original Atom Material Theme",
-  "version": "1.11.0",
+  "version": "2.0.0",
   "publisher": "hex-ci",
   "author": {
     "name": "Hex"
