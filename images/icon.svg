@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Dark circular background -->
+  <circle cx="512" cy="512" r="512" fill="#263238"/>
+
+  <!-- Geometric "M" shape in teal -->
+  <polygon
+    points="260,720 260,300 380,300 512,520 644,300 764,300 764,720 640,720 640,440 512,640 384,440 384,720"
+    fill="#009688"
+  />
+
+  <!-- Accent dot below the M -->
+  <circle cx="512" cy="820" r="50" fill="#00BFA5" opacity="0.8"/>
+
+  <!-- Subtle outer ring -->
+  <circle cx="512" cy="512" r="490" fill="none" stroke="#009688" stroke-width="3" opacity="0.12"/>
+</svg>

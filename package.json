@@ -1,7 +1,7 @@
 {
   "name": "atom-material-theme-revived",
-  "displayName": "Atom Material Theme Revived",
-  "description": "Atom Material Theme Revived - based on Atom-Material-Ui and Atom-Material-Syntax",
+  "displayName": "Material Theme Revived (Atom Fork)",
+  "description": "Material Design dark theme for VS Code — a community-maintained fork of the original Atom Material Theme",
   "version": "1.11.0",
   "publisher": "hex-ci",
   "author": {
@@ -12,7 +12,7 @@
     "color": "#232e33",
     "theme": "dark"
   },
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "MIT",
   "homepage": "https://github.com/hex-ci/vscode-atom-material-theme/blob/master/README.md",
   "bugs": {
     "url": "https://github.com/hex-ci/vscode-atom-material-theme/issues"
@@ -22,17 +22,24 @@
     "url": "https://github.com/hex-ci/vscode-atom-material-theme"
   },
   "engines": {
-    "vscode": "^1.16.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "material",
+    "material design",
+    "dark theme",
+    "atom material theme",
+    "atom material syntax"
+  ],
   "contributes": {
     "themes": [
       {
-        "label": "Atom Material Theme Revived",
+        "label": "Material Theme Revived (Atom Fork)",
         "uiTheme": "vs-dark",
-        "path": "./themes/atom-material-theme.json"
+        "path": "./themes/atom-material-color-theme.json"
       }
     ]
   }

@@ -1,0 +1,21 @@
+# Extension packaging rules for vsce package
+# Only essential runtime files are included in the .vsix
+
+# Development & CI
+.git/
+.vscode/
+.vscodeignore
+.gitignore
+CLAUDE.md
+
+# Testing samples (not shipped to users)
+samples/
+
+# Source assets (PNG is the one used by Marketplace)
+images/icon.svg
+images/screenshot.png
+
+# Build artifacts
+*.vsix
+node_modules/
+package-lock.json
