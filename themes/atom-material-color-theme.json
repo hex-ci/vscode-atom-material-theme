@@ -158,7 +158,7 @@
     "editorCodeLens.foreground": "#3e4b50",
     "editorHoverWidget.background": "#29363d",
     "editorHoverWidget.border": "#232e33",
-    "editorHoverWidget.foreground": "#e6f5f3",
+    "editorHoverWidget.foreground": "#CFD8DC",
     "editorHoverWidget.statusBarBackground": "#29363d",
     "editorIndentGuide.background1": "#37474f",
     "editorIndentGuide.activeBackground1": "#4f6875",
