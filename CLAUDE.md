@@ -17,24 +17,37 @@ Preserved from the original Atom Material Theme:
 - All UI colors derive from the official Material Design palette via `md-colors.less`, not arbitrary hex picks
 - The theme targets readability with high contrast between syntax colors and the dark blue-grey background
 
+## Common Commands
+
+This repository has no npm scripts, build step, lint command, package dependencies, or automated test suite.
+
+- Validate theme JSON: `python3 -m json.tool themes/atom-material-color-theme.json >/dev/null`
+- Launch the Extension Development Host from VS Code: press **F5** and use `Launch Extension`
+- Launch from a shell with the VS Code CLI: `code --extensionDevelopmentPath="$PWD"`
+- Package a VSIX: `vsce package`
+- Publish to the Marketplace: `vsce publish` (requires an Azure DevOps PAT tied to the `hex-ci` publisher)
+- Run a single test: not applicable; use targeted manual visual verification by opening one relevant file from `samples/` in the Extension Development Host
+
 ## Development Workflow
 
-There are no npm scripts or build tools. The workflow is:
-
 1. Edit `themes/atom-material-color-theme.json` directly
-2. Press **F5** in VS Code to launch the Extension Development Host (configured in `.vscode/launch.json`)
-3. Visually verify changes against sample files in `samples/` (35 language examples for testing syntax highlighting)
-4. Package with `vsce package` to produce the `.vsix` file
-5. Publish with `vsce publish` (requires Azure DevOps PAT tied to the `hex-ci` publisher)
+2. Validate JSON with `python3 -m json.tool themes/atom-material-color-theme.json >/dev/null`
+3. Press **F5** in VS Code to launch the Extension Development Host (configured in `.vscode/launch.json`)
+4. Visually verify changes against relevant sample files in `samples/` (32 sample files for syntax highlighting coverage)
+5. Package with `vsce package` to produce the `.vsix` file
+6. Publish with `vsce publish` only when releasing
 
 ## Theme Architecture
 
-`themes/atom-material-color-theme.json` has two sections:
+This extension has no runtime activation code. `package.json` contributes exactly one dark theme through `contributes.themes[0].path`, which points VS Code at `./themes/atom-material-color-theme.json`.
 
-- **`colors`** (~350 entries): Workbench/UI chrome colors covering all modern VS Code features (activity bar, sidebar, tabs, terminal, status bar, scrollbar, diff editor, git decorations, bracket pair colorization, inline chat, notebooks, testing panel, etc.)
-- **`tokenColors`** (~108 rules): TextMate scope-based syntax highlighting rules mapping scopes to foreground colors and optional fontStyle
+`themes/atom-material-color-theme.json` is the source of truth and has these top-level responsibilities:
 
-`semanticHighlighting` is explicitly set to `false`.
+- **Theme metadata**: `name`, `type: "dark"`, and `semanticHighlighting: false`
+- **`colors`** (351 entries): Workbench/UI chrome colors covering modern VS Code surfaces (activity bar, sidebar, tabs, terminal, status bar, scrollbar, diff editor, git decorations, bracket pair colorization, inline chat, notebooks, testing panel, etc.)
+- **`tokenColors`** (108 rules): TextMate scope-based syntax highlighting rules mapping scopes to foreground colors and optional `fontStyle`
+
+`.vscodeignore` controls what ships in the VSIX. Development-only files such as `.vscode/`, `CLAUDE.md`, `samples/`, screenshots, SVG source assets, existing `*.vsix` files, and `node_modules/` are excluded from packaged extensions.
 
 ### Color Palette
 
@@ -92,9 +105,10 @@ All UI colors follow Google Material Design specifications from [md-colors.less]
 
 - `themes/atom-material-color-theme.json` - The theme definition (only source file)
 - `package.json` - Extension manifest (contributes the theme, no scripts/deps)
-- `samples/` - Language example files for visual testing (not automated tests)
-- `images/` - Marketplace icon and screenshot
+- `samples/` - 32 language example files for manual visual testing (not automated tests)
+- `images/` - Marketplace icon and screenshot source assets
 - `.vscode/launch.json` - F5 Extension Host debug configuration
+- `.vscodeignore` - VSIX packaging exclusions
 
 ## Conventions
 

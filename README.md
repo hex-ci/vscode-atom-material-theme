@@ -20,8 +20,8 @@ This extension is a **fork** of the original Atom Material Theme, preserved and 
 - **Community maintained** — actively updated for VS Code compatibility
 - **Same beloved look** — retains the exact Material Design palette from the original
 - **Design philosophy preserved** — borders are subtle or invisible, hover effects use gentle brightness shifts, and teal is reserved for active indicators and primary action buttons
-- **Enhanced workbench colors** — 250+ additional UI colors covering bracket pair colorization, indent guides, minimap, notifications, testing panel, inline chat, and more
-- **Expanded syntax highlighting** — 90+ new token rules for Rust, modern TypeScript/JS, Python type hints, JSX attributes, CSS preprocessors, Go, Java, C#, Ruby, PHP, and SQL
+- **Enhanced workbench colors** — 350+ UI color entries covering bracket pair colorization, indent guides, minimap, notifications, testing panel, inline chat, and more
+- **Expanded syntax highlighting** — 100+ token color rules for Rust, modern TypeScript/JS, Python type hints, JSX attributes, CSS preprocessors, Go, Java, C#, Ruby, PHP, and SQL
 - **No extra complexity** — still a single, hand-authored theme file with zero dependencies
 
 ## Preview
@@ -40,7 +40,7 @@ This theme uses a carefully curated dark Material palette with a consistent back
 | Dark | `#232e33` | Tabs, sidebar, panels, status bar |
 | Base | `#263238` | Editor background |
 | Lighter | `#273237` | Terminal, panel backgrounds |
-| Hover | `#2c383d` | Hover states, active selections |
+| Hover / border | `#2c383d` | Hover states, borders, separators, and focus outlines |
 
 ### Syntax Colors
 
