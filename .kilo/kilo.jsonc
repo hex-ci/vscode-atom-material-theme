@@ -1,0 +1,6 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "commit_message": {
+    "prompt": "Please write commit messages strictly following the Conventional Commits format. Use this structure:\n\n```\n<type>[optional scope]: <gitmoji> <description>\n[optional body]\n```\n\nGuidelines:\n\n1. **Type and Scope**: Choose an appropriate type (e.g., `feat`, `fix`) and add an optional scope to describe the affected module or feature.\n2. **Gitmoji**: Include a `gitmoji` emoji that accurately reflects the nature of the change.\n3. **Description**: Write a concise and descriptive title; wrap any code or specific terminology in backticks (`).\n4. **Body**: If more detail is needed, use a clearly structured body section:\n   - Use bullet points (`*`) to improve readability.\n   - Where applicable, clearly explain the motivation, background, or technical implementation details of the change.\n\nCommit messages should be clear, substantive, and professional, helping to improve readability and project-tracking efficiency."
+  }
+}
