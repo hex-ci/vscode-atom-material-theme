@@ -4,9 +4,11 @@
 # Development & CI
 .git/
 .vscode/
+.kilo/
 .vscodeignore
 .gitignore
 CLAUDE.md
+AGENTS.md
 
 # Testing samples (not shipped to users)
 samples/

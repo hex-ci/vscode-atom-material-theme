@@ -40,7 +40,7 @@ Visual check: open the folder in VS Code, F5 → `Launch Extension` (`.vscode/la
 ## Pitfalls
 
 - Unknown or misspelled color IDs fail silently — no error, just no effect. `.vscode/settings.json` turns off JSON schema download, so nothing validates the keys against VS Code's color schema; confirm visually in the Extension Development Host.
-- `.kilo/` and this `AGENTS.md` are not listed in `.vscodeignore`, so they land in the `.vsix` (`npx @vscode/vsce ls` shows them). Run that dry run after adding any root-level file. The same file still excludes `CLAUDE.md`, which no longer exists.
+- `.vscodeignore` is the only packaging filter — anything new at the repo root ships unless listed there (that is why `.kilo/` and `AGENTS.md` are excluded). After adding a root-level file, run `npx @vscode/vsce ls`; the expected package is 8 entries: manifest, `[Content_Types].xml`, `changelog.md`, `LICENSE.md`, `readme.md`, `package.json`, the theme file, `icon.png`.
 - Only `images/icon.png` ships; `icon.svg` and `screenshot.png` are excluded, and the README renders the screenshot from `raw.githubusercontent.com/…/images/screenshot.png` — renaming or moving it breaks the Marketplace page.
 - Three names must stay in sync: `package.json` `displayName`, `contributes.themes[0].label`, and the theme JSON `name`.
 - `engines.vscode` is pinned to `^1.90.0`; a color key added to VS Code after 1.90 is ignored for users on 1.90, so confirm a key exists there before adding it.
