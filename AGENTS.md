@@ -4,7 +4,7 @@ Pure-declaration VS Code theme extension: no runtime code, no dependency tree, n
 
 ## Layout
 
-- `themes/atom-material-color-theme.json` — everything: 351 workbench `colors` entries and 108 `tokenColors` rules.
+- `themes/atom-material-color-theme.json` — everything: ~470 workbench `colors` entries and 108 `tokenColors` rules.
 - `package.json` — manifest; `contributes.themes[0]` points at the theme file and its `label` must equal the theme JSON's `name`.
 - `samples/` — one file per language (30+) for eyeballing highlighting; excluded from the package.
 - `.vscodeignore` — packaging exclusions; keeps dev files out of the `.vsix`.
@@ -39,7 +39,8 @@ Visual check: open the folder in VS Code, F5 → `Launch Extension` (`.vscode/la
 
 ## Pitfalls
 
-- Unknown or misspelled color IDs fail silently — no error, just no effect. `.vscode/settings.json` turns off JSON schema download, so nothing validates the keys against VS Code's color schema; confirm visually in the Extension Development Host.
+- Colour ids are schema-validated at runtime: `colorUtils.ts` rebuilds a JSON schema from every `registerColor` call, so an id your VS Code build does not know reports `Property <id> is not allowed.`, and an id registered with `needsTransparency` rejects opaque values (`This color must be transparent or it will obscure content`). `.vscode/settings.json` only disables remote schema *download*; it does not silence this. Check the Problems panel, and never add an id that exists only in one release — 1.90 has `scm.historyItem*` ids that current builds removed.
+- `engines.vscode` is pinned to `^1.90.0`: a key added after 1.90 does nothing for 1.90 users, and a key removed after 1.90 produces warnings for current users. Add only ids present in both trees.
 - `.vscodeignore` is the only packaging filter — anything new at the repo root ships unless listed there (that is why `.kilo/` and `AGENTS.md` are excluded). After adding a root-level file, run `npx @vscode/vsce ls`; the expected package is 8 entries: manifest, `[Content_Types].xml`, `changelog.md`, `LICENSE.md`, `readme.md`, `package.json`, the theme file, `icon.png`.
 - Only `images/icon.png` ships; `icon.svg` and `screenshot.png` are excluded, and the README renders the screenshot from `raw.githubusercontent.com/…/images/screenshot.png` — renaming or moving it breaks the Marketplace page.
 - Three names must stay in sync: `package.json` `displayName`, `contributes.themes[0].label`, and the theme JSON `name`.
