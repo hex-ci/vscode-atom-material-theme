@@ -2,6 +2,24 @@
 
 All notable changes to the "Material Theme Revived (Atom Fork)" extension will be documented in this file.
 
+## 2.1.0
+
+### Changed
+- Diff view rebuilt on the palette: insertion and deletion use the theme's green and light red, with a 30% word-level fill over a 12% line-level fill so changed words stand apart from the changed line
+- Scrollbar thumb is a neutral gray (`#6A777A`) instead of a background-toned color; the minimap viewport slider derives from it again (VS Code halves the alpha), so the current viewport is visible
+- Focus rings (`focusBorder`, `list.focusOutline`, inline chat input, active input option) use the teal accent, so keyboard focus is findable
+- Error status bar items use a deeper red (`#D32F2F`) for legible white text
+- Diagnostics, search and word-occurrence highlights, debug icons and variables, merge editor, command center, charts, welcome page, chat panel, comments, multi-cursor, keybinding labels and tree rulers follow the palette instead of VS Code's stock colors
+- Terminal ANSI bright colors are distinct again from their normal counterparts
+- Line numbers, CodeLens and inlay hints raised out of the near-invisible range; `errorForeground` and git-deleted decorations use the light red so text stays readable on dark backgrounds
+
+### Fixed
+- `editorOverviewRuler.findMatchForeground` was opaque, which VS Code rejects — the id must stay transparent (`#00BFA5CC`)
+- Bracket match border was fully transparent (`#FF000000`) and the overview ruler find-match marker was an off-palette pure blue
+
+### Technical
+- 471 workbench color keys, up from 351; every key checked against both the 1.90 and the current VS Code registries, and ids that require transparency are kept translucent
+
 ## 2.0.0
 
 ### Changed
