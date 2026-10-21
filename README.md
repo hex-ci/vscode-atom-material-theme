@@ -19,8 +19,8 @@ This extension is a **fork** of the original Atom Material Theme, preserved and 
 
 - **Community maintained** — actively updated for VS Code compatibility
 - **Same beloved look** — retains the exact Material Design palette from the original
-- **Design philosophy preserved** — borders are subtle or invisible, hover effects use gentle brightness shifts, and teal is reserved for active indicators and primary action buttons
-- **Enhanced workbench colors** — 350+ UI color entries covering bracket pair colorization, indent guides, minimap, notifications, testing panel, inline chat, and more
+- **Design philosophy preserved** — borders are subtle or invisible, hover effects use gentle brightness shifts, diff fills use a lighter line tint with a stronger word tint so line-level and word-level changes stay distinguishable, and teal is reserved for active indicators, focus rings, and primary action buttons
+- **Enhanced workbench colors** — 470+ UI color entries covering bracket pair colorization, indent guides, minimap and scrollbar, diff view, merge editor, debug UI, search highlights, terminal ANSI, notifications, testing panel, inline chat, and more
 - **Expanded syntax highlighting** — 100+ token color rules for Rust, modern TypeScript/JS, Python type hints, JSX attributes, CSS preprocessors, Go, Java, C#, Ruby, PHP, and SQL
 - **No extra complexity** — still a single, hand-authored theme file with zero dependencies
 
@@ -40,7 +40,9 @@ This theme uses a carefully curated dark Material palette with a consistent back
 | Dark | `#232e33` | Tabs, sidebar, panels, status bar |
 | Base | `#263238` | Editor background |
 | Lighter | `#273237` | Terminal, panel backgrounds |
-| Hover / border | `#2c383d` | Hover states, borders, separators, and focus outlines |
+| Hover / border | `#2c383d` | Hover states, borders, separators |
+| Selection | `#3b4d56` | Editor selection, minimap selection marker |
+| Focus outline | `#00BFA5` at 60% | Keyboard focus rings, list focus |
 
 ### Syntax Colors
 
@@ -62,11 +64,26 @@ This theme uses a carefully curated dark Material palette with a consistent back
 
 | Role | Hex Code |
 |------|----------|
-| Error / Deletion | `#EF5350` |
+| Error / Deletion — fills, gutter, icons | `#EF5350` |
+| Error — text on dark surfaces | `#FF8A80` |
+| Error — solid surface (status bar) | `#D32F2F` |
 | Warning / Modification | `#FFCA28` |
 | Success / Addition | `#8BC34A` |
 | Info | `#4FB6F7` |
-| Teal hover | `#00BFA5` |
+| Accent / primary action (teal) | `#009688` |
+| Accent hover, focus ring | `#00BFA5` |
+
+### Text & UI Grays
+
+| Role | Hex Code |
+|------|----------|
+| Primary text | `#EEFFFF` |
+| Secondary text, icons, scrollbar | `#A7B6B8` |
+| Muted, inactive titles | `#8A9BA1` |
+| Inlay hints | `#7A8C93` |
+| Disabled, inactive tabs | `#6A777A` |
+| Line numbers, CodeLens | `#6B7C83` |
+| Comments | `#4F6875` |
 
 ## Quick Install
 
