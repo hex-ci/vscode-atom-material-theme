@@ -73,6 +73,17 @@ This theme uses a carefully curated dark Material palette with a consistent back
 | Accent / primary action (teal) | `#009688` |
 | Accent hover, focus ring | `#00BFA5` |
 
+### Diff Overlay Fills
+
+Diff fills use the deep end of the palette — a bright tint over the editor background lifts it enough to drown the comment color, so the fill stays dark and the hue carries the signal:
+
+| Region | Hex Code |
+|--------|----------|
+| Inserted, word level | `#1B5E20` at 42% |
+| Inserted, line level | `#1B5E20` at 16% |
+| Deleted, word level | `#B71C1C` at 28% |
+| Deleted, line level | `#B71C1C` at 12% |
+
 ### Text & UI Grays
 
 | Role | Hex Code |
