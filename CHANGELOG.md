@@ -2,6 +2,16 @@
 
 All notable changes to the "Material Theme Revived (Atom Fork)" extension will be documented in this file.
 
+## 2.1.1
+
+### Fixed
+- Diff fills no longer drown the comment color: insertion and deletion use the deep end of the palette (`#1B5E20` / `#B71C1C`) instead of a bright tint, so comments inside a change stay readable (1.85–2.20, was 1.22–1.29) while the change itself stays clearly visible (ΔE 22 against the editor background)
+- Word-level and line-level fills stay separated (ΔE 13.2 / 12.8), and body text contrast on the fills rises from 6.99 / 7.38 to 10.56 / 11.80
+- Removed text is slightly less saturated than before, so added and deleted blocks carry equal weight
+
+### Technical
+- README documents the diff overlay fills and why they use deep tints
+
 ## 2.1.0
 
 ### Changed
