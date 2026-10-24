@@ -2,6 +2,16 @@
 
 All notable changes to the "Material Theme Revived (Atom Fork)" extension will be documented in this file.
 
+## 2.1.2
+
+### Changed
+- Scrollbar thumb is far less prominent at rest: `#6A777A` at 0.35 alpha instead of 0.50, so it composites to 1.44 against the editor background (was 1.70). In the diff view — two side-by-side scrollbars with a near full-length thumb — it no longer competes with the added/modified/deleted markers on the overview ruler
+- Hover rises to 1.88 (was 2.09), widening the gap between resting and interactive states so the drag affordance reads more clearly
+- The minimap viewport slider keeps its previous appearance: `minimapSlider.background` and `minimapSlider.hoverBackground` are now declared at the alpha VS Code used to derive (`0x40` / `0x5A`, half of the old scrollbar alphas), because they follow the scrollbar thumb and would otherwise darken with it
+
+### Technical
+- 473 workbench color keys; the two explicit `minimapSlider` entries replace a derivation chain, so future scrollbar adjustments must be mirrored there
+
 ## 2.1.1
 
 ### Fixed
